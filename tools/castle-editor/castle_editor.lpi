@@ -26,15 +26,18 @@
       <FormatVersion Value="2"/>
       <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="2">
+    <RequiredPackages Count="3">
       <Item1>
-        <PackageName Value="castle_components"/>
+        <PackageName Value="bgracontrols"/>
       </Item1>
       <Item2>
-        <PackageName Value="LCL"/>
+        <PackageName Value="castle_components"/>
       </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
     </RequiredPackages>
-    <Units Count="21">
+    <Units Count="28">
       <Unit0>
         <Filename Value="castle_editor.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -149,6 +152,7 @@
       <Unit16>
         <Filename Value="../common-code/toolassocdoctypes.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="ToolAssocDocTypes"/>
       </Unit16>
       <Unit17>
         <Filename Value="../common-code/toolmanifest.pas"/>
@@ -169,6 +173,46 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CastleShellCtrls"/>
       </Unit20>
+      <Unit21>
+        <Filename Value="../ab-forms/projectwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrProjectWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ProjectWizard"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../ab-forms/newprojectdialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frCreateProject"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="NewProjectDialog"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../ab-forms/uihelper.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../ab-forms/openprojectdialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frOpenProject"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="OpenProjectDialog"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../ab-forms/newprojectdialog.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../ab-forms/openprojectdialog.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="../ab-forms/projectwizard.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit27>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -178,7 +222,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="../../src/common_includes;$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../common-code;code"/>
+      <OtherUnitFiles Value="../common-code;code;../ab-forms"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

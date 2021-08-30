@@ -42,7 +42,8 @@ uses
   Forms, FormChooseProject, ProjectUtils, FormNewProject, EditorUtils,
   FormProject, FrameDesign, FormAbout, FrameViewFile, FormPreferences,
   VisualizeTransform, FormSpriteSheetEditor, DataModuleIcons, FormImportAtlas,
-  FormImportStarling, FormNewUnit, EditorCodeTools, CastleShellCtrls;
+  FormImportStarling, FormNewUnit, EditorCodeTools, CastleShellCtrls,
+  NewProjectDialog, OpenProjectDialog, ProjectWizard, uihelper;
 
 {$R *.res}
 
@@ -51,6 +52,7 @@ begin
   Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TIcons, Icons);
+  Application.CreateForm(TFrProjectWizard, FrProjectWizard);
   Application.CreateForm(TChooseProjectForm, ChooseProjectForm);
   Application.CreateForm(TNewProjectForm, NewProjectForm);
   Application.CreateForm(TAboutForm, AboutForm);
@@ -58,5 +60,7 @@ begin
   Application.CreateForm(TImportAtlasForm, ImportAtlasForm);
   Application.CreateForm(TImportStarlingForm, ImportStarlingForm);
   Application.CreateForm(TNewUnitForm, NewUnitForm);
+  Application.CreateForm(TfrCreateProject, frCreateProject);
+  Application.CreateForm(TfrOpenProject, frOpenProject);
   Application.Run;
 end.
