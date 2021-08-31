@@ -37,7 +37,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="28">
+    <Units Count="26">
       <Unit0>
         <Filename Value="castle_editor.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -202,17 +202,12 @@
         <UnitName Value="OpenProjectDialog"/>
       </Unit24>
       <Unit25>
-        <Filename Value="../ab-forms/newprojectdialog.lfm"/>
+        <Filename Value="../ab-forms/abframedesign.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="abDesignFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit25>
-      <Unit26>
-        <Filename Value="../ab-forms/openprojectdialog.lfm"/>
-        <IsPartOfProject Value="True"/>
-      </Unit26>
-      <Unit27>
-        <Filename Value="../ab-forms/projectwizard.lfm"/>
-        <IsPartOfProject Value="True"/>
-      </Unit27>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

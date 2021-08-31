@@ -1,0 +1,2129 @@
+object abDesignFrame: TabDesignFrame
+  Left = 0
+  Height = 612
+  Top = 0
+  Width = 1513
+  ClientHeight = 612
+  ClientWidth = 1513
+  DesignTimePPI = 144
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 331
+  DesignTop = 174
+  object SplitterLeft: TSplitter
+    Left = 319
+    Height = 612
+    Top = 0
+    Width = 8
+  end
+  object SplitterRight: TSplitter
+    Left = 1114
+    Height = 612
+    Top = 0
+    Width = 8
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object PanelRight: TPanel
+    Left = 1122
+    Height = 612
+    Top = 0
+    Width = 391
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 612
+    ClientWidth = 391
+    ParentFont = False
+    TabOrder = 2
+    object LabelControlSelected: TLabel
+      Left = 6
+      Height = 50
+      Top = 6
+      Width = 379
+      Align = alTop
+      BorderSpacing.Around = 6
+      Caption = 'Selected:'#13#10'xxx (yyy)'
+      ParentColor = False
+      ParentFont = False
+    end
+    object ControlProperties: TPageControl
+      Left = 0
+      Height = 550
+      Top = 62
+      Width = 391
+      ActivePage = TabLayout
+      Align = alClient
+      ParentFont = False
+      TabIndex = 1
+      TabOrder = 0
+      object TabBasic: TTabSheet
+        Caption = 'Basic'
+        ParentFont = False
+      end
+      object TabLayout: TTabSheet
+        Caption = 'Layout'
+        ClientHeight = 512
+        ClientWidth = 383
+        ParentFont = False
+        object PanelLayoutTop: TPanel
+          Left = 0
+          Height = 358
+          Top = 0
+          Width = 383
+          Align = alTop
+          AutoSize = True
+          BevelOuter = bvNone
+          ChildSizing.ShrinkHorizontal = crsHomogenousSpaceResize
+          ChildSizing.Layout = cclTopToBottomThenLeftToRight
+          ChildSizing.ControlsPerLine = 100
+          ClientHeight = 358
+          ClientWidth = 383
+          ParentFont = False
+          TabOrder = 0
+          object PanelAnchors: TPanel
+            Left = 0
+            Height = 307
+            Top = 0
+            Width = 392
+            AutoSize = True
+            BevelOuter = bvNone
+            ChildSizing.LeftRightSpacing = 8
+            ChildSizing.TopBottomSpacing = 8
+            ClientHeight = 307
+            ClientWidth = 392
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 0
+            object CheckParentSelfAnchorsEqual: TCheckBox
+              AnchorSideTop.Control = SelfAnchorsFrame
+              AnchorSideTop.Side = asrBottom
+              Left = 8
+              Height = 29
+              Top = 270
+              Width = 300
+              BorderSpacing.Top = 8
+              Caption = 'Anchor to the same side of Parent'
+              OnChange = CheckParentSelfAnchorsEqualChange
+              ParentFont = False
+              TabOrder = 0
+            end
+            inline SelfAnchorsFrame: TAnchorsFrame
+              AnchorSideLeft.Control = CheckParentSelfAnchorsEqual
+              AnchorSideTop.Control = ButtonClearAnchorDeltas
+              AnchorSideTop.Side = asrBottom
+              Left = 8
+              Height = 211
+              Top = 51
+              Width = 182
+              BorderSpacing.Top = 8
+              ClientHeight = 211
+              ClientWidth = 182
+              TabOrder = 1
+              DesignLeft = 751
+              DesignTop = 252
+              inherited GroupBox1: TGroupBox
+                Height = 211
+                Width = 182
+                ClientHeight = 181
+                ClientWidth = 178
+                inherited ButtonLeftTop: TSpeedButton
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonLeftMiddle: TSpeedButton
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonLeftBottom: TSpeedButton
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+                inherited ButtonMiddleTop: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonMiddleMiddle: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonMiddleBottom: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+                inherited ButtonRightTop: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonRightMiddle: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonRightBottom: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+              end
+            end
+            inline ParentAnchorsFrame: TAnchorsFrame
+              AnchorSideLeft.Control = SelfAnchorsFrame
+              AnchorSideLeft.Side = asrBottom
+              AnchorSideTop.Control = ButtonClearAnchorDeltas
+              AnchorSideTop.Side = asrBottom
+              Left = 202
+              Height = 211
+              Top = 51
+              Width = 182
+              BorderSpacing.Left = 12
+              BorderSpacing.Top = 8
+              ClientHeight = 211
+              ClientWidth = 182
+              TabOrder = 2
+              DesignLeft = 751
+              DesignTop = 252
+              inherited GroupBox1: TGroupBox
+                Height = 211
+                Width = 182
+                Caption = 'Parent Side'
+                ClientHeight = 181
+                ClientWidth = 178
+                inherited ButtonLeftTop: TSpeedButton
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonLeftMiddle: TSpeedButton
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonLeftBottom: TSpeedButton
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+                inherited ButtonMiddleTop: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonMiddleMiddle: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonMiddleBottom: TSpeedButton
+                  Left = 58
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+                inherited ButtonRightTop: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Width = 53
+                end
+                inherited ButtonRightMiddle: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Top = 58
+                  Width = 53
+                end
+                inherited ButtonRightBottom: TSpeedButton
+                  Left = 115
+                  Height = 53
+                  Top = 115
+                  Width = 53
+                end
+              end
+            end
+            object ButtonClearAnchorDeltas: TButton
+              AnchorSideLeft.Control = SelfAnchorsFrame
+              Left = 8
+              Height = 35
+              Top = 8
+              Width = 182
+              AutoSize = True
+              Caption = 'Move to the anchor'
+              OnClick = ButtonClearAnchorDeltasClick
+              ParentFont = False
+              TabOrder = 3
+            end
+            object LabelSizeInfo: TLabel
+              AnchorSideRight.Side = asrBottom
+              Left = 216
+              Height = 25
+              Top = 8
+              Width = 86
+              Anchors = [akTop, akRight]
+              Caption = 'Show sizes'
+              Font.Color = clBlue
+              Font.Style = [fsUnderline]
+              ParentColor = False
+              ParentFont = False
+              ParentShowHint = False
+              ShowHint = True
+            end
+          end
+          object PanelLayoutTransform: TPanel
+            Left = 0
+            Height = 51
+            Top = 307
+            Width = 392
+            AutoSize = True
+            BevelOuter = bvNone
+            ChildSizing.LeftRightSpacing = 8
+            ChildSizing.TopBottomSpacing = 8
+            ChildSizing.HorizontalSpacing = 8
+            ChildSizing.VerticalSpacing = 8
+            ChildSizing.Layout = cclLeftToRightThenTopToBottom
+            ChildSizing.ControlsPerLine = 10
+            ClientHeight = 51
+            ClientWidth = 392
+            ParentFont = False
+            TabOrder = 1
+            object ButtonResetTransformation: TButton
+              Left = 8
+              Height = 35
+              Top = 8
+              Width = 195
+              AutoSize = True
+              Caption = 'Reset Transformation'
+              OnClick = ButtonResetTransformationClick
+              ParentFont = False
+              TabOrder = 0
+            end
+          end
+        end
+      end
+      object TabEvents: TTabSheet
+        Caption = 'Events'
+        ClientHeight = 417
+        ClientWidth = 316
+        ParentFont = False
+        object PanelEventsInfo: TPanel
+          Left = 0
+          Height = 106
+          Top = 0
+          Width = 316
+          Align = alTop
+          AutoSize = True
+          BevelOuter = bvNone
+          ClientHeight = 106
+          ClientWidth = 316
+          ParentFont = False
+          TabOrder = 0
+          object LabelEventsInfo: TLabel
+            Left = 7
+            Height = 92
+            Top = 7
+            Width = 302
+            Align = alTop
+            BorderSpacing.Around = 8
+            Caption = 'TODO: It''s not possible to assign the events using the CGE editor. For now, you have to assign events using code.'
+            ParentColor = False
+            ParentFont = False
+            WordWrap = True
+          end
+        end
+      end
+      object TabAll: TTabSheet
+        Caption = 'All'
+        ParentFont = False
+      end
+    end
+  end
+  object PanelLeft: TPanel
+    Left = 0
+    Height = 612
+    Top = 0
+    Width = 319
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 612
+    ClientWidth = 319
+    ParentFont = False
+    TabOrder = 3
+    object ControlsTree: TTreeView
+      Left = 0
+      Height = 575
+      Hint = 'Select a control to edit it''s properties.'#10'Hold down "Ctrl" key to select multiple components at once.'#10'Drag the control to move it to the front, back, or even change it''s parent.'
+      Top = 37
+      Width = 319
+      Align = alClient
+      DragMode = dmAutomatic
+      MultiSelect = True
+      ParentFont = False
+      ParentShowHint = False
+      PopupMenu = MenuTreeView
+      RightClickSelect = True
+      RowSelect = True
+      ScrollBars = ssAutoBoth
+      ShowHint = True
+      TabOrder = 0
+      OnAdvancedCustomDrawItem = ControlsTreeAdvancedCustomDrawItem
+      OnDragDrop = ControlsTreeDragDrop
+      OnDragOver = ControlsTreeDragOver
+      OnEditing = ControlsTreeEditing
+      OnEditingEnd = ControlsTreeEditingEnd
+      OnEndDrag = ControlsTreeEndDrag
+      OnSelectionChanged = ControlsTreeSelectionChanged
+      Options = [tvoAllowMultiselect, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoRightClickSelect, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+    object LabelHierarchy: TLabel
+      Left = 6
+      Height = 25
+      Top = 6
+      Width = 307
+      Align = alTop
+      BorderSpacing.Around = 6
+      Caption = 'Hierarchy'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object PanelMiddle: TPanel
+    Left = 327
+    Height = 612
+    Top = 0
+    Width = 787
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 612
+    ClientWidth = 787
+    ParentFont = False
+    TabOrder = 4
+    object PanelMiddleTop: TPanel
+      Left = 6
+      Height = 48
+      Top = 6
+      Width = 775
+      Align = alTop
+      BorderSpacing.Around = 6
+      BevelOuter = bvNone
+      ChildSizing.HorizontalSpacing = 4
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 48
+      ClientWidth = 775
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      object LabelHeaderUi: TLabel
+        Left = 0
+        Height = 46
+        Top = 0
+        Width = 21
+        BorderSpacing.Right = 12
+        Caption = 'UI:'
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object LabelUIScaling: TLabel
+        Left = 744
+        Height = 25
+        Hint = 'UI Scaling to 1600x900'
+        Top = 8
+        Width = 35
+        Align = alCustom
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = '50%'
+        ParentColor = False
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+      end
+      object ButtonInteractMode: TBCButtonFocus
+        Left = 33
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF77FFFFFFFEFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF820000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF12FFFFFFF0FFFFFFCBFFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFF
+          FF88FFFFFF88FFFFFF88FFFFFF88FFFFFFD2FFFFFFE100000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF82FFFF
+          FFFFFFFFFF350000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF6AFFFFFFFFFFFFFF2C0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF1DFFFFFFF2FFFFFFB1000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF21FFFFFFFFFFFFFF7800000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFFB1FFFFFFF6FFFFFF250000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFFD8FFFF
+          FFB8000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF53FFFF
+          FFFFFFFFFF7A0000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF99FFFFFFF2FFFFFF040000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF0EFFFFFFE5FFFFFFD3FFFFFF050000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF60FFFFFFFFFFFFFF2800000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF93FFFFFFFDFFFFFF3A0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF3BFFFFFFFFFFFFFF4A000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF36FFFF
+          FFFDFFFFFF9700000000FFFFFF11FFFFFFA2FFFFFF2A00000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF2CFFFF
+          FFFFFFFFFF5A0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF04FFFFFFCFFFFFFFE7FFFFFF10FFFF
+          FF07FFFFFFC1FFFFFFFFFFFFFF68000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF2CFFFFFFFFFFFFFF5A0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF56FFFFFFFFFFFFFF5AFFFFFF01FFFFFFA7FFFFFFFFFFFF
+          FFFFFFFFFF68000000000000000000000000000000000000000000000000FFFF
+          FF0AFFFFFFB4FFFFFF29FFFFFF2CFFFFFFFFFFFFFF5A00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF88FFFFFFFCFFFFFF0DFFFFFF89FFFFFFFFFFFFFF9CFFFFFFFFFFFFFF680000
+          00000000000000000000FFFFFF09FFFFFFB4FFFFFF2BFFFFFF29FFFFFFFFFFFF
+          FF5EFFFFFF2CFFFFFFFFFFFFFF5A000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF47FFFFFFFFFFFF
+          FFFAFFFFFFFFFFFFFF9DFFFFFF1FFFFFFFFFFFFFFF68FFFFFF08FFFFFFB4FFFF
+          FF2FFFFFFF26FFFFFFFFFFFFFF61FFFFFF29FFFFFFFFFFFFFF5EFFFFFF2CFFFF
+          FFFFFFFFFF5A0000000000000000FFFFFF13FFFFFF1B00000000000000000000
+          000000000000000000000000000000000000FFFFFF46FFFFFF92FFFFFF63FFFF
+          FF02FFFFFF1FFFFFFFFFFFFFFF68FFFFFF22FFFFFFFFFFFFFF65FFFFFF26FFFF
+          FFFFFFFFFF61FFFFFF29FFFFFFFFFFFFFF93FFFFFF68FFFFFFFFFFFFFF470000
+          000000000000FFFFFFCEFFFFFFF1FFFFFF050000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF1FFFFF
+          FFFFFFFFFF68FFFFFF22FFFFFFFFFFFFFF65FFFFFF26FFFFFFFFFFFFFF73FFFF
+          FF3BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD1FFFFFF080000000000000000FFFF
+          FFE4FFFFFFFFFFFFFF0E00000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF1FFFFFFFFFFFFFFF68FFFF
+          FF22FFFFFFFFFFFFFF77FFFFFF39FFFFFFFFFFFFFFFBFFFFFFF4FFFFFFF2FFFF
+          FF5BFFFFFF5AFFFFFF0B000000000000000000000000FFFFFFE4FFFFFFFFFFFF
+          FF0E000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF1FFFFFFFFFFFFFFF68FFFFFF22FFFFFFFFFFFF
+          FFFCFFFFFFF4FFFFFFF3FFFFFF8EFFFFFF9DFFFFFF3100000000000000000000
+          0000000000000000000000000000FFFFFFE4FFFFFFFFFFFFFF0E000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF1FFFFFFFFFFFFFFF68FFFFFF22FFFFFFFFFFFFFFC3FFFFFF9DFFFF
+          FF32000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFFE4FFFFFFFFFFFFFF0E0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF1FFFFF
+          FFFFFFFFFF68FFFFFF22FFFFFFFFFFFFFF650000000000000000000000000000
+          0000000000000000000000000000FFFFFF19FFFFFF5DFFFFFF98FFFFFFC6FFFF
+          FFFBFFFFFFFFFFFFFF0E00000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF1FFFFFFFFFFFFFFF68FFFF
+          FF22FFFFFFFFFFFFFF6500000000000000000000000000000000FFFFFFA6FFFF
+          FFECFFFFFFFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFF
+          FF06000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF0BFFFFFFFCFFFFFFACFFFFFF75FFFFFFFFFFFF
+          FF4D00000000000000000000000000000000FFFFFFFDFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8FFFFFF4B00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF88FFFFFFFFFFFFFFFFFFFFFFC6FFFFFF06000000000000
+          00000000000000000000FFFFFFD2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFF7FFFFFF4100000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF30FFFFFF42FFFFFF05000000000000000000000000000000000000
+          0000FFFFFF4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FFFFFF470000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF05FFFFFF41FFFFFF44FFFFFF44FFFFFF44FFFF
+          FFF7FFFFFFFFFFFFFFFFFFFFFFFAFFFFFF4E0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFEFFFFFF570000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF27FFFF
+          FFA4FFFFFFAAFFFFFFAAFFFFFFAAFFFFFFACFFFFFFD7FFFFFF7E000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonInteractModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object ButtonModifyUiMode: TBCButtonFocus
+        Left = 87
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF2BFFFFFF58FFFFFF66FFFFFF53FFFFFF0F00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF48FFFFFFE5FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFEDFFFFFF400000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF54FFFFFFC5FFFFFF89FFFFFF54FFFFFF44FFFF
+          FF63FFFFFFEAFFFFFFE8FFFFFF08000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF72FFFF
+          FFFFFFFFFF3F0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF05FFFFFF12000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF57FFFFFFFFFFFFFF550000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9EFFFFFFEAFFFFFFB8FFFFFF7EFFFFFF180000000000000000000000000000
+          00000000000000000000FFFFFF70FFFFFFFFFFFFFF4300000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF78FFFFFFFFFFFF
+          FFD9FFFFFFF7FFFFFFEAFFFFFFB8FFFFFF7EFFFFFF1800000000000000000000
+          0000FFFFFFA2FFFFFFFBFFFFFF10000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF14FFFFFFE8FFFFFF97FFFFFF3BFFFF
+          FF95FFFFFFCAFFFFFFF7FFFFFFEAFFFFFFB8FFFFFF2300000000FFFFFF4CFFFF
+          FF6C000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFFB5FFFFFFCDFFFFFF010000000000000000FFFF
+          FF6CFFFFFFEFFFFFFFFBFFFFFFD1FFFFFF230000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF7AFFFFFFF9FFFFFF4000000000FFFFFF37FFFFFFD9FFFFFFD9FFFF
+          FF6FFFFFFFDFFFFFFFD3FFFFFF24000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF14FFFF
+          FFE7FFFFFF97FFFFFF33FFFFFFD9FFFFFFD7FFFFFF3500000000FFFFFF41FFFF
+          FFDFFFFFFFD3FFFFFF2700000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFFB5FFFFFFD5FFFF
+          FFDAFFFFFFD7FFFFFF33000000000000000000000000FFFFFF45FFFFFFE0FFFF
+          FFD1FFFFFF230000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF7BFFFFFFFFFFFFFFD8FFFFFF320000
+          000000000000000000000000000000000000FFFFFF45FFFFFFDFFFFFFFD1FFFF
+          FF23000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF11FFFFFFCEFFFFFFE3FFFFFF4D00000000000000000000
+          0000000000000000000000000000FFFFFF45FFFFFFDFFFFFFFD1FFFFFF230000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF1CFFFFFFCEFFFFFFE3FFFFFF4F0000000000000000000000000000
+          00000000000000000000FFFFFF41FFFFFFDFFFFFFFD3FFFFFF27000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF1CFFFFFFCEFFFFFFE3FFFFFF4F000000000000000000000000000000000000
+          000000000000FFFFFF41FFFFFFDFFFFFFFD3FFFFFF2700000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF1CFFFF
+          FFCDFFFFFFE3FFFFFF4F00000000000000000000000000000000000000000000
+          0000FFFFFF41FFFFFFDFFFFFFFD3FFFFFF270000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF1CFFFFFF7EFFFFFF21FFFFFFCDFFFF
+          FFE3FFFFFF50000000000000000000000000000000000000000000000000FFFF
+          FF41FFFFFFDFFFFFFFD3FFFFFF27000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFFB8FFFFFFFDFFFFFF1DFFFFFF1CFFFFFFCDFFFFFFE3FFFF
+          FF50000000000000000000000000000000000000000000000000FFFFFF41FFFF
+          FFDFFFFFFFD3FFFFFF2700000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF45FFFF
+          FFFFFFFFFF9A0000000000000000FFFFFF1EFFFFFFCEFFFFFFE3FFFFFF4E0000
+          000000000000000000000000000000000000FFFFFF32FFFFFFD7FFFFFFFCFFFF
+          FFD1FFFFFF170000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFFB1FFFFFFFAFFFFFF1C0000
+          00000000000000000000FFFFFF1EFFFFFFCDFFFFFFE3FFFFFF4E000000000000
+          000000000000FFFFFF32FFFFFFD7FFFFFFDBFFFFFF75FFFFFFE7FFFFFFA40000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF01FFFFFFF4FFFFFFBC0000000000000000000000000000
+          000000000000FFFFFF1EFFFFFFCDFFFFFFE3FFFFFF4E00000000FFFFFF32FFFF
+          FFD8FFFFFFDBFFFFFF3800000000FFFFFFA3FFFFFFCE00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF07FFFFFFFEFFFFFFA500000000000000000000000000000000000000000000
+          0000FFFFFF1EFFFFFFCDFFFFFFE3FFFFFF75FFFFFFD8FFFFFFDAFFFFFF380000
+          0000FFFFFF04FFFFFFC3FFFFFFC0000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFFD2FFFF
+          FFEDFFFFFF3B000000000000000000000000000000000000000000000000FFFF
+          FF1EFFFFFFCDFFFFFFFCFFFFFFDAFFFFFF3800000000FFFFFF04FFFFFFABFFFF
+          FFF7FFFFFF660000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF40FFFFFFF6FFFFFFFFFFFF
+          FFDBFFFFFFB8FFFFFFA1FFFFFF18000000000000000000000000FFFFFF1EFFFF
+          FFCDFFFFFFE3FFFFFF68FFFFFF29FFFFFFB2FFFFFFF7FFFFFF88000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF26FFFFFF97FFFFFFDBFFFFFFF0FFFF
+          FFEEFFFFFF2F00000000000000000000000000000000FFFFFF1EFFFFFFC3FFFF
+          FFFEFFFFFFF8FFFFFFEAFFFFFF7F000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF04FFFFFF5AFFFFFF77FFFF
+          FF28000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonModifyUiModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object SpinEditSnap: TSpinEdit
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Side = asrCenter
+        Left = 143
+        Height = 46
+        Hint = 'Snap (when moving/resizing UI)'
+        Top = 0
+        Width = 75
+        BorderSpacing.Left = 6
+        ParentFont = False
+        TabOrder = 2
+        Value = 10
+      end
+      object LabelHeaderTransform: TLabel
+        Left = 254
+        Height = 46
+        Top = 0
+        Width = 83
+        BorderSpacing.Left = 36
+        BorderSpacing.Right = 12
+        Caption = 'Transform:'
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object ButtonTransformSelectMode: TBCButtonFocus
+        Left = 349
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF42FFFFFF65FFFFFF060000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFD1FFFFFFF7FFFFFFE1FFFFFF91FFFFFF150000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF4FFFFFFF2E0000
+          000000000000000000000000000000000000FFFFFF38FFFFFFECFFFFFFEFFFFF
+          FFF8FFFFFFFEFFFFFFE2FFFFFFA2000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9EFFFFFFEAFFFFFF35000000000000
+          00000000000000000000FFFFFFBCFFFFFFFFFFFFFFC1FFFFFF6DFFFFFFEAFFFF
+          FFFFFFFFFFBD0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9EFFFFFFFFFFFFFFE5FFFFFF400000000000000000FFFF
+          FF1BFFFFFFE4FFFFFFEDFFFFFF3AFFFFFF1BFFFFFFE4FFFFFFEDFFFFFF3A0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9EFFFFFFFFFFFFFFFFFFFFFFE6FFFFFF4A00000000FFFFFF9BFFFFFFFEFFFF
+          FFD200000000FFFFFF9CFFFFFFFEFFFFFFD20000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF9DFFFFFFFFFFFF
+          FFF8FFFFFFFBFFFFFFE7FFFFFF5DFFFFFFE0FFFFFFF5FFFFFF60FFFFFF0BFFFF
+          FFE0FFFFFFF5FFFFFF5D00000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9CFFFFFFFFFFFFFFBAFFFFFFC5FFFF
+          FFFAFFFFFFE9FFFFFFF9FFFFFFDDFFFFFF05FFFFFF75FFFFFFFAFFFFFFDDFFFF
+          FF04000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9EFFFFFFFFFFFFFFB3FFFFFF06FFFFFFBCFFFFFFF7FFFF
+          FFFDFFFFFF89FFFFFF01FFFFFFDAFFFFFFFDFFFFFF8800000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9CFFFFFFFFFFFFFFB300000000FFFFFF04FFFFFFB6FFFFFFEBFFFFFF12FFFF
+          FF4EFFFFFFF1FFFFFFEEFFFFFFC9FFFFFFACFFFFFF98FFFFFF81FFFFFF69FFFF
+          FF51FFFFFF380000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF9CFFFFFFFFFFFF
+          FFB30000000000000000FFFFFF03FFFFFF3C00000000FFFFFFD0FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FFFFFFBA0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9CFFFFFFFFFFFFFFB3000000000000
+          0000000000000000000000000000FFFFFF3FFFFFFF60FFFFFF79FFFFFF90FFFF
+          FFA6FFFFFFF5FFFFFFFDFFFFFFF3FFFFFFACFFFFFF0300000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9CFFFFFFFFFFFFFFB30000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF03FFFFFFAAFFFFFFF2FFFF
+          FFF0FFFFFF9CFFFFFF0100000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9CFFFFFFFFFFFFFFB300000000000000000000000000000000000000000000
+          000000000000FFFFFF06FFFFFFB9FFFFFFF6FFFFFFEBFFFFFF85000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF9CFFFFFFFFFFFF
+          FFB3000000000000000000000000000000000000000000000000FFFFFF0BFFFF
+          FFC5FFFFFFF9FFFFFFEAFFFFFF70000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9CFFFFFFFFFFFFFFB3000000000000
+          0000000000000000000000000000FFFFFF12FFFFFFD0FFFFFFFCFFFFFFE8FFFF
+          FF5B000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9CFFFFFFFFFFFFFFB30000000000000000000000000000
+          0000FFFFFF1AFFFFFFD4FFFFFFFEFFFFFFE5FFFFFF4300000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9CFFFFFFFFFFFFFFB3000000000000000000000000FFFFFF29FFFFFFDEFFFF
+          FFFFFFFFFFE1FFFFFF3200000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF9BFFFFFFFFFFFF
+          FFB30000000000000000FFFFFF36FFFFFFE2FFFFFFFFFFFFFFDEFFFFFF250000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9BFFFFFFFFFFFFFFB300000000FFFF
+          FF46FFFFFFE5FFFFFFFEFFFFFFD8FFFFFF1B0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9BFFFFFFFFFFFFFFB3FFFFFF58FFFFFFE7FFFFFFFCFFFF
+          FFD1FFFFFF130000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF9BFFFFFFFFFFFFFFEAFFFFFFEAFFFFFFF8FFFFFFC2FFFFFF09000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF9AFFFFFFFFFFFF
+          FFFAFFFFFFF4FFFFFFB3FFFFFF05000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF9BFFFFFFFFFFFFFFF1FFFFFFA5FFFF
+          FF02000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF9AFFFFFFF3FFFFFF8D0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF7AFFFFFF740000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonTransformSelectModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object ButtonTransformTranslateMode: TBCButtonFocus
+        Left = 403
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF55FFFFFF7F00000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF49FFFFFFFEFFFF
+          FFFFFFFFFFA20000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF49FFFFFFF8FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FF89000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF4EFFFFFFF9FFFFFFFFFFFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF810000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF13FFFFFFF7FFFFFFFFFFFF
+          FFD2FFFFFFF6FFFFFFFFFFFFFFC2FFFFFFFFFFFFFFFFFFFFFF44000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF08FFFFFFC9FFFFFFC4FFFFFF15FFFFFFF5FFFF
+          FFFFFFFFFF4EFFFFFFA0FFFFFFE0FFFFFF270000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF080000000000000000000000000000000000000000000000000000
+          0000FFFFFFF5FFFFFFFFFFFFFF4B000000000000000000000000000000000000
+          000000000000FFFFFF0900000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF4DFFFFFFF5FFFF
+          FFAE000000000000000000000000000000000000000000000000FFFFFFF5FFFF
+          FFFFFFFFFF4B0000000000000000000000000000000000000000FFFFFF64FFFF
+          FFFEFFFFFF8DFFFFFF0100000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF4DFFFFFFF9FFFFFFFFFFFFFFBE000000000000
+          000000000000000000000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B0000
+          000000000000000000000000000000000000FFFFFF73FFFFFFFFFFFFFFFFFFFF
+          FF91FFFFFF01000000000000000000000000000000000000000000000000FFFF
+          FF49FFFFFFF7FFFFFFFFFFFFFFD7FFFFFF190000000000000000000000000000
+          00000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B00000000000000000000
+          00000000000000000000FFFFFF01FFFFFF96FFFFFFFFFFFFFFFFFFFFFF98FFFF
+          FF0100000000000000000000000000000000FFFFFF57FFFFFFFEFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB2000000000000
+          00000000000000000000FFFFFF88FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDB0000000000000000000000000000
+          0000FFFFFF03FFFFFFB1FFFFFFFFFFFFFFFFFFFFFFABFFFFFF44FFFFFF44FFFF
+          FF44FFFFFF44FFFFFF44FFFFFF44FFFFFF44FFFFFFF8FFFFFFFFFFFFFF7BFFFF
+          FF44FFFFFF44FFFFFF44FFFFFF44FFFFFF44FFFFFF44FFFFFF77FFFFFFF9FFFF
+          FFFFFFFFFFE2FFFFFF1E0000000000000000000000000000000000000000FFFF
+          FF03FFFFFFA2FFFFFFFFFFFFFFFFFFFFFF810000000000000000000000000000
+          00000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B00000000000000000000
+          00000000000000000000FFFFFF3EFFFFFFF7FFFFFFFFFFFFFFD7FFFFFF180000
+          0000000000000000000000000000000000000000000000000000FFFFFF03FFFF
+          FFA2FFFFFFFFFFFFFFD500000000000000000000000000000000000000000000
+          0000FFFFFFF5FFFFFFFFFFFFFF4B000000000000000000000000000000000000
+          0000FFFFFF8AFFFFFFFFFFFFFFD7FFFFFF180000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF03FFFFFF5DFFFF
+          FF2D000000000000000000000000000000000000000000000000FFFFFFF5FFFF
+          FFFFFFFFFF4B0000000000000000000000000000000000000000FFFFFF11FFFF
+          FF68FFFFFF140000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFFF5FFFFFFFFFFFFFF4B00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF5DFFFFFF560000
+          0000FFFFFFF5FFFFFFFFFFFFFF4BFFFFFF39FFFFFF73FFFFFF06000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF1AFFFFFFFFFFFFFFFFFFFFFF7AFFFFFFF5FFFF
+          FFFFFFFFFF7EFFFFFFF7FFFFFFFFFFFFFF520000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF01FFFFFFAEFFFFFFFFFFFFFFFFFFFFFFFAFFFFFFFFFFFFFFF9FFFF
+          FFFFFFFFFFD7FFFFFF1200000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF06FFFFFFB0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD7FFFFFF180000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF05FFFF
+          FFAFFFFFFFFFFFFFFFFFFFFFFFE3FFFFFF1A0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF06FFFFFFBFFFFF
+          FFDFFFFFFF1D0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonTransformTranslateModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object ButtonTransformRotateMode: TBCButtonFocus
+        Left = 457
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF03FFFFFF35FFFFFF7AFFFFFFBBFFFFFF930000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF88FFFFFFEDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC200000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF08FFFFFF010000000000000000FFFFFFDFFFFFFFFFFFFF
+          FFEAFFFFFFC2FFFFFF4EFFFFFF03000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF44FFFFFFA2FFFFFFE4FFFF
+          FFFFFFFFFFFDFFFFFFB200000000FFFFFFA4FFFFFFFFFFFFFFFEFFFFFFFFFFFF
+          FFEFFFFFFF4D0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF23FFFFFFC1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFD100000000FFFFFF60FFFFFFFFFFFFFFB1FFFFFFC8FFFFFFFFFFFFFFF9FFFF
+          FF41000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF43FFFFFFF1FFFF
+          FFFFFFFFFFF5FFFFFF92FFFFFF3DFFFFFF13FFFFFF11FFFFFF0500000000FFFF
+          FF1BFFFFFFFFFFFFFFDBFFFFFF05FFFFFFAAFFFFFFFFFFFFFFE6FFFFFF0E0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF35FFFFFFF4FFFFFFFFFFFFFFBDFFFFFF1A0000
+          0000000000000000000000000000000000000000000000000000FFFFFFC2FFFF
+          FFDD00000000FFFFFF08FFFFFFD6FFFFFFFFFFFFFF8700000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF07FFFFFFD7FFFFFFFFFFFFFFB2FFFFFF050000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF05FFFFFF0B000000000000
+          0000FFFFFF4AFFFFFFFFFFFFFFEBFFFFFF070000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF6FFFFFFFFFFFFF
+          FFE2FFFFFF0D0000000000000000000000000000000000000000FFFFFF3BFFFF
+          FFB1FFFFFF070000000000000000000000000000000000000000FFFFFF02FFFF
+          FFE0FFFFFFFFFFFFFF4500000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFFD3FFFFFFFFFFFFFF62000000000000
+          0000000000000000000000000000FFFFFF3BFFFFFFE6FFFFFFFAFFFFFFC7FFFF
+          FF080000000000000000000000000000000000000000FFFFFF9FFFFFFFFFFFFF
+          FF7D000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF1CFFFFFFFFFFFFFFF8FFFFFF0C0000000000000000000000000000
+          0000FFFFFF35FFFFFFE7FFFFFFFFFFFFFFFFFFFFFFFAFFFFFFC7FFFFFF080000
+          0000000000000000000000000000FFFFFF7AFFFFFFFFFFFFFF97000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF47FFFF
+          FFFFFFFFFFCF00000000000000000000000000000000FFFFFF3AFFFFFFE6FFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFFFFFFC7FFFFFF06000000000000
+          000000000000FFFFFF74FFFFFFFFFFFFFF9E0000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF57FFFFFFFFFFFFFFBA0000
+          0000000000000000000000000000FFFFFF6BFFFFFFEEFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFE1FFFFFF13000000000000000000000000FFFF
+          FF93FFFFFFFFFFFFFF8300000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF4DFFFFFFFFFFFFFFC600000000000000000000
+          00000000000000000000FFFFFF73FFFFFFEDFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFDFFFFFFF2200000000000000000000000000000000FFFFFFD0FFFFFFFFFFFF
+          FF58000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF2AFFFFFFFFFFFFFFF2FFFFFF030000000000000000000000000000
+          000000000000FFFFFF73FFFFFFEDFFFFFFFFFFFFFFDFFFFFFF22000000000000
+          00000000000000000000FFFFFF39FFFFFFFFFFFFFFF4FFFFFF0E000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF01FFFF
+          FFECFFFFFFFFFFFFFF4200000000000000000000000000000000000000000000
+          0000FFFFFF7AFFFFFFE5FFFFFF1F00000000000000000000000000000000FFFF
+          FF05FFFFFFCDFFFFFFFFFFFFFF98000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF91FFFFFFFFFFFF
+          FFB20000000000000000FFFFFF20FFFFFF40000000000000000000000000FFFF
+          FF0300000000000000000000000000000000FFFFFF04FFFFFFA9FFFFFFFFFFFF
+          FFE9FFFFFF140000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF24FFFFFFF9FFFFFFFFFFFFFF520000
+          0000FFFFFFA6FFFFFFFDFFFFFF2C000000000000000000000000000000000000
+          000000000000FFFFFF2BFFFFFFC7FFFFFFFFFFFFFFF7FFFFFF41000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF85FFFFFFFFFFFFFFF4FFFFFF44FFFFFF82FFFF
+          FFFFFFFFFF7400000000FFFFFF13FFFFFF55FFFFFF4CFFFFFF6CFFFFFFB6FFFF
+          FFFDFFFFFFFFFFFFFFECFFFFFF45000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF04FFFFFFB7FFFFFFFFFFFFFFFCFFFFFFBAFFFFFFFFFFFFFFB80000
+          0000FFFFFFA2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFFFFFFA7FFFF
+          FF1C000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF09FFFFFF9CFFFFFFFFFFFFFFFFFFFFFFF9FFFFFFF5FFFFFF07FFFFFF45FFFF
+          FFB6FFFFFFCAFFFFFFB1FFFFFF78FFFFFF250000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF0FFFFFFF65FFFF
+          FFB7FFFFFFF4FFFFFFFFFFFFFFFFFFFFFF2A0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF94FFFFFFFFFFFFFFFFFFFFFFFAFFFF
+          FFC3FFFFFF77FFFFFF0300000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF34FFFFFF83FFFFFF4CFFFFFF0D00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonTransformRotateModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object ButtonTransformScaleMode: TBCButtonFocus
+        Left = 511
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF0900000000000000000000
+          0000FFFFFF0FFFFFFF1900000000000000000000000000000000000000000000
+          000000000000FFFFFF28FFFFFFC0FFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFC8FFFFFF4D0000000000000000000000000000000000000000000000000000
+          000000000000FFFFFFA5FFFFFFF7FFFFFF5500000000FFFFFF01FFFFFFDFFFFF
+          FFF6FFFFFF1C000000000000000000000000000000000000000000000000FFFF
+          FF6CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB40000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFB4FFFFFFFFFFFFFFFBFFFFFF55FFFFFF07FFFFFFFFFFFFFFFFFFFFFF3A0000
+          00000000000000000000000000000000000000000000FFFFFF09FFFFFF68FFFF
+          FF77FFFFFF98FFFFFFCFFFFFFFCAFFFFFFFFFFFFFFB700000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF10FFFFFFCAFFFF
+          FFFFFFFFFFFCFFFFFF5EFFFFFFFFFFFFFFFFFFFFFF3A00000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF44FFFFFFF6FFFF
+          FFFFFFFFFFC6FFFFFFFFFFFFFFB7000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF10FFFFFFCAFFFFFFFFFFFF
+          FFFCFFFFFFFFFFFFFFFFFFFFFF3A000000000000000000000000000000000000
+          00000000000000000000FFFFFF44FFFFFFF6FFFFFFFFFFFFFFDAFFFFFF95FFFF
+          FFFFFFFFFFB70000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF13FFFFFF43FFFFFF50FFFFFFD8FFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFF3A000000000000000000000000000000000000000000000000FFFF
+          FF3EFFFFFFF4FFFFFFFFFFFFFFDAFFFFFF1BFFFFFF89FFFFFFFFFFFFFFB70000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFDBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF500000
+          000000000000000000000000000000000000FFFFFF3EFFFFFFF4FFFFFFFFFFFF
+          FFDAFFFFFF1B00000000FFFFFF78FFFFFFFFFFFFFFA400000000000000000000
+          00000000000000000000000000000000000000000000FFFFFFB2FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFFFFFF2100000000000000000000
+          000000000000FFFFFF3EFFFFFFF4FFFFFFFFFFFFFFDAFFFFFF1B000000000000
+          0000FFFFFF08FFFFFF59FFFFFF15000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF3EFFFF
+          FFF4FFFFFFFFFFFFFFDAFFFFFF1B000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF3EFFFFFFF4FFFFFFFFFFFFFFDAFFFF
+          FF1B000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF3EFFFFFFF4FFFFFFFFFFFFFFDAFFFFFF1B00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF3EFFFFFFF3FFFF
+          FFFFFFFFFFDAFFFFFF1B00000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF3EFFFFFFF3FFFFFFFFFFFFFFDAFFFFFF1B0000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF3EFFFFFFF3FFFFFFFFFFFFFFDAFFFFFF1B0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF11FFFFFF12000000000000000000000000FFFFFF3EFFFFFFF3FFFFFFFFFFFF
+          FFDAFFFFFF1B000000000000000000000000FFFFFF02FFFFFF94FFFFFF90FFFF
+          FF77FFFFFF77FFFFFF77FFFFFF74FFFFFF290000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF09FFFFFFEAFFFFFFEDFFFF
+          FF0E00000000FFFFFF3EFFFFFFF3FFFFFFFFFFFFFFDAFFFFFF1B000000000000
+          00000000000000000000FFFFFF77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFCD00000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF1CFFFFFFFFFFFFFFFFFFFFFF25FFFFFF3EFFFF
+          FFF3FFFFFFFFFFFFFFDAFFFFFF1B000000000000000000000000000000000000
+          0000FFFFFF62FFFFFFFFFFFFFFFFFFFFFFFDFFFFFFD9FFFFFFCCFFFFFFCBFFFF
+          FF6C000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF1CFFFFFFFFFFFFFFFFFFFFFF5AFFFFFFF3FFFFFFFFFFFFFFDAFFFF
+          FF1B000000000000000000000000000000000000000000000000FFFFFF55FFFF
+          FFFFFFFFFFFCFFFFFFFFFFFFFFF5FFFFFF420000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000FFFFFF1CFFFF
+          FFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFDAFFFFFF1B00000000000000000000
+          000000000000000000000000000000000000FFFFFF55FFFFFFFFFFFFFFEDFFFF
+          FFDCFFFFFFFFFFFFFFF5FFFFFF42000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF1CFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFE4FFFFFF58FFFFFF44FFFFFF160000000000000000000000000000
+          00000000000000000000FFFFFF55FFFFFFFFFFFFFFEBFFFFFF1DFFFFFFDCFFFF
+          FFFFFFFFFFF5FFFFFF3D00000000000000000000000000000000000000000000
+          00000000000000000000FFFFFF1CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFEDFFFFFF08000000000000000000000000000000000000
+          0000FFFFFF51FFFFFFFFFFFFFFE700000000FFFFFF1DFFFFFFDCFFFFFFFFFFFF
+          FFB4000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF05FFFFFFD1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFCEFFFFFF030000000000000000000000000000000000000000FFFFFF10FFFF
+          FFA9FFFFFF6B0000000000000000FFFFFF1CFFFFFF95FFFFFF3A000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonTransformScaleModeClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+      object LabelSelectedViewport: TLabel
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Side = asrCenter
+        Left = 597
+        Height = 46
+        Top = 0
+        Width = 100
+        BorderSpacing.Left = 36
+        BorderSpacing.Right = 12
+        Caption = 'MyViewport:'
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+      object ButtonViewportMenu: TBCButtonFocus
+        Left = 709
+        Height = 46
+        Top = 0
+        Width = 50
+        StateClicked.Background.Color = 9474192
+        StateClicked.Background.Gradient1.StartColor = 15722194
+        StateClicked.Background.Gradient1.EndColor = 13137169
+        StateClicked.Background.Gradient1.GradientType = gtLinear
+        StateClicked.Background.Gradient1.Point1XPercent = 0
+        StateClicked.Background.Gradient1.Point1YPercent = 0
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 100
+        StateClicked.Background.Gradient2.StartColor = 13137169
+        StateClicked.Background.Gradient2.EndColor = 15722194
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 35
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboSolid
+        StateClicked.FontEx.Color = clBlack
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 5
+        StateClicked.FontEx.ShadowOffsetX = 5
+        StateClicked.FontEx.ShadowOffsetY = 5
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.PaddingRight = 10
+        StateHover.Background.Color = 5131854
+        StateHover.Background.Gradient1.StartColor = 15722194
+        StateHover.Background.Gradient1.EndColor = 13137169
+        StateHover.Background.Gradient1.GradientType = gtLinear
+        StateHover.Background.Gradient1.Point1XPercent = 0
+        StateHover.Background.Gradient1.Point1YPercent = 0
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 100
+        StateHover.Background.Gradient2.StartColor = 13137169
+        StateHover.Background.Gradient2.EndColor = 15722194
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 35
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Color = 12027501
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 5
+        StateHover.FontEx.ShadowOffsetX = 5
+        StateHover.FontEx.ShadowOffsetY = 5
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.PaddingRight = 10
+        StateNormal.Background.Color = 4013373
+        StateNormal.Background.Gradient1.StartColor = 15722194
+        StateNormal.Background.Gradient1.EndColor = 13137169
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 13137169
+        StateNormal.Background.Gradient2.EndColor = 15722194
+        StateNormal.Background.Gradient2.GradientType = gtLinear
+        StateNormal.Background.Gradient2.Point1XPercent = 0
+        StateNormal.Background.Gradient2.Point1YPercent = 0
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 100
+        StateNormal.Background.Gradient1EndPercent = 35
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 11369058
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 5
+        StateNormal.FontEx.ShadowOffsetX = 5
+        StateNormal.FontEx.ShadowOffsetY = 5
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.PaddingRight = 10
+        Color = clNone
+        Constraints.MaxWidth = 50
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          460E0000424D460E00000000000036000000280000001E0000001E0000000100
+          200000000000100E000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF12FFFFFFB2FFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFF90FFFFFF01000000000000
+          0000000000000000000000000000FFFFFF51FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF130000000000000000000000000000
+          000000000000FFFFFF08FFFFFF8EFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFF6C0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF0AFFFFFF93FFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFF730000
+          00000000000000000000000000000000000000000000FFFFFF51FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF13000000000000
+          0000000000000000000000000000FFFFFF10FFFFFFABFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCBFFFFFF89000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF0AFFFFFF92FFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+          FFAAFFFFFF72000000000000000000000000000000000000000000000000FFFF
+          FF51FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FF130000000000000000000000000000000000000000FFFFFF10FFFFFFACFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFF
+          FFCCFFFFFFCCFFFFFFCCFFFFFFCCFFFFFFCBFFFFFF8A00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000
+        }
+        GlyphMargin = 0
+        OnClick = ButtonViewportMenuClick
+        ParentColor = False
+        Rounding.RoundX = 3
+        Rounding.RoundY = 3
+        Rounding.RoundOptions = [rrTopLeftBevel, rrTopRightBevel, rrBottomRightBevel, rrBottomLeftBevel]
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHighF
+        TabStop = True
+      end
+    end
+  end
+  object MenuViewport: TPopupMenu
+    Left = 979
+    Top = 98
+    object MenuItemViewportCameraSetInitial: TMenuItem
+      Caption = 'Camera Initial (stored in design file) := Current'
+      Hint = 'Sets Viewport.Camera InitialPosition/Direction/Up to current view, and sets Viewport.AutoCamera to false.'
+      OnClick = MenuItemViewportCameraSetInitialClick
+    end
+    object MenuItemViewportCameraCurrentFromInitial: TMenuItem
+      Caption = 'Camera Current := Initial (stored in design file)'
+      OnClick = MenuItemViewportCameraCurrentFromInitialClick
+    end
+    object MenuItemViewportCameraViewAll: TMenuItem
+      Caption = 'Camera Current := View All'
+      OnClick = MenuItemViewportCameraViewAllClick
+    end
+    object MenuItemSeparator123: TMenuItem
+      Caption = '-'
+    end
+    object MenuItemViewportCamera2DViewInitial: TMenuItem
+      Caption = 'Camera Setup (Initial and Current) for 2D View and Projection'
+      Hint = 'Call Viewport.Setup2D'
+      OnClick = MenuItemViewportCamera2DViewInitialClick
+    end
+    object MenuItemSeparator2: TMenuItem
+      Caption = '-'
+    end
+    object MenuViewportNavigationNone: TMenuItem
+      Caption = 'Set Navigation to None (Viewport.Navigation := nil)'
+      OnClick = MenuViewportNavigationNoneClick
+    end
+    object MenuViewportNavigation2D: TMenuItem
+      Caption = 'Set Navigation to 2D (Viewport.Navigation := TCastle2DNavigation.Create)'
+      OnClick = MenuViewportNavigation2DClick
+    end
+    object MenuViewportNavigationExamine: TMenuItem
+      Caption = 'Set Navigation to Examine (Viewport.Navigation := TCastleExamineNavigation.Create)'
+      OnClick = MenuViewportNavigationExamineClick
+    end
+    object MenuViewportNavigationFly: TMenuItem
+      Caption = 'Set Navigation to Fly (Viewport.Navigation := TCastleWalkNavigation.Create, Gravity := false)'
+      OnClick = MenuViewportNavigationFlyClick
+    end
+    object MenuViewportNavigationWalk: TMenuItem
+      Caption = 'Set Navigation to Walk (Viewport.Navigation := TCastleWalkNavigation.Create, Gravity := true)'
+      OnClick = MenuViewportNavigationWalkClick
+    end
+    object MenuViewportNavigationThirdPerson: TMenuItem
+      Caption = 'Set Navigation to Third-Person (Viewport.Navigation := TCastleThirdPersonNavigation.Create)'
+      OnClick = MenuViewportNavigationThirdPersonClick
+    end
+    object MenuItemSeparator1: TMenuItem
+      Caption = '-'
+    end
+    object MenuItemViewportSort2D: TMenuItem
+      Caption = 'Sort Items For Correct 2D Blending'
+      OnClick = MenuItemViewportSort2DClick
+    end
+  end
+  object MenuTreeView: TPopupMenu
+    OnPopup = MenuTreeViewPopup
+    Left = 784
+    Top = 167
+    object MenuTreeViewItemAddUserInterface: TMenuItem
+      Caption = 'Add User Interface'
+    end
+    object MenuTreeViewItemAddTransform: TMenuItem
+      Caption = 'Add Transform'
+    end
+    object MenuTreeViewItemAddBehavior: TMenuItem
+      Caption = 'Add Behavior (Extends Parent Transform)'
+    end
+    object MenuTreeViewItemAddNonVisual: TMenuItem
+      Caption = 'Add Non-Visual Component'
+    end
+    object MenuTreeViewItemSeparator127u30130120983: TMenuItem
+      Caption = '-'
+    end
+    object MenuTreeViewItemRename: TMenuItem
+      Caption = 'Rename'
+      OnClick = MenuTreeViewItemRenameClick
+    end
+    object MenuTreeViewItemDuplicate: TMenuItem
+      Caption = 'Duplicate'
+      OnClick = MenuTreeViewItemDuplicateClick
+    end
+    object MenuTreeViewItemCopy: TMenuItem
+      Caption = 'Copy'
+      OnClick = MenuTreeViewItemCopyClick
+    end
+    object MenuTreeViewItemPaste: TMenuItem
+      Caption = 'Paste'
+      OnClick = MenuTreeViewItemPasteClick
+    end
+    object MenuTreeViewItemDelete: TMenuItem
+      Caption = 'Delete'
+      OnClick = MenuTreeViewItemDeleteClick
+    end
+  end
+  object UpdateObjectInspector: TTimer
+    Interval = 500
+    OnTimer = UpdateObjectInspectorTimer
+    Left = 830
+    Top = 95
+  end
+end

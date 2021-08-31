@@ -25,7 +25,7 @@ uses
   ExtCtrls, ComCtrls, CastleShellCtrls, StdCtrls, ValEdit, ActnList, Buttons,
   ProjectUtils, Types, Contnrs, CastleControl, CastleUIControls,
   CastlePropEdits, CastleDialogs, X3DNodes, CastleFindFiles,
-  EditorUtils, FrameDesign, FrameViewFile, FormNewUnit,
+  EditorUtils, FrameDesign, abFrameDesign, FrameViewFile, FormNewUnit,
   ToolManifest, ToolPackageFormat;
 
 type
@@ -243,7 +243,7 @@ type
       BuildMode: TBuildMode;
       OutputList: TOutputList;
       RunningProcess: TAsynchronousProcessQueue;
-      Design: TDesignFrame;
+      Design: TabDesignFrame;
       ShellListView1: TCastleShellListView;
       ShellTreeView1: TCastleShellTreeView;
       ViewFileFrame: TViewFileFrame;
@@ -1155,7 +1155,7 @@ procedure TProjectForm.NeedsDesignFrame;
 begin
   if Design = nil then
   begin
-    Design := TDesignFrame.Create(Self);
+    Design := TabDesignFrame.Create(Self);
     Design.Parent := PanelAboveTabs;
     Design.Align := alClient;
     Design.OnUpdateFormCaption := @UpdateFormCaption;
