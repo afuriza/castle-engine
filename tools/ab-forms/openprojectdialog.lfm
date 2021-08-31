@@ -9,7 +9,6 @@ object frOpenProject: TfrOpenProject
   DesignTimePPI = 144
   OnActivate = FormActivate
   OnShow = FormShow
-  LCLVersion = '2.0.12.0'
   object lbRecents: TListBox
     Left = 8
     Height = 215
@@ -279,8 +278,8 @@ object frOpenProject: TfrOpenProject
     Left = 9
     Height = 25
     Top = 120
-    Width = 60
-    Caption = 'Recents'
+    Width = 120
+    Caption = 'Recent projects'
     Font.Color = clWhite
     ParentColor = False
     ParentFont = False
