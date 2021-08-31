@@ -40,7 +40,6 @@ type
     EditProjectName: TLabeledEdit;
     EditProjectCaption: TLabeledEdit;
     EditStateName: TLabeledEdit;
-    CloseTarget: TForm;
     procedure BCButtonFocus1Click(Sender: TObject);
     procedure bcEmptyClick(Sender: TObject);
     procedure bcEmptyKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -166,7 +165,7 @@ var
   ProjectDir, ProjectDirUrl, ManifestUrl, TemplateName: String;
   InvalidIndex: Integer;
   ProjectName, ProjectLocation: TCaption;
-  CanClose: Boolean = False;
+  CanClose: Boolean = True;
 begin
 
   ProjectName := EditProjectName.Text;
@@ -261,7 +260,7 @@ begin
   end;
 
   if CanClose then
-    CloseTarget.Hide;
+    FrProjectWizard.Hide;
 end;
 
 end.

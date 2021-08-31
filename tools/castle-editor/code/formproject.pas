@@ -320,7 +320,7 @@ uses TypInfo, LCLType,
   CastleLog, CastleComponentSerialize, CastleSceneCore, CastleStringUtils,
   CastleFonts, X3DLoad, CastleFileFilters, CastleImages, CastleSoundEngine,
   CastleClassUtils,
-  FormAbout, FormChooseProject, FormPreferences, FormSpriteSheetEditor,
+  FormAbout, FormChooseProject, FormPreferences, FormSpriteSheetEditor, ProjectWizard,
   ToolCompilerInfo, ToolCommonUtils, ToolArchitectures, ToolProcessWait;
 
 procedure TProjectForm.MenuItemQuitClick(Sender: TObject);
@@ -1270,7 +1270,8 @@ begin
     end;
 
     Free; // do not call MenuItemDesignClose, to avoid OnCloseQuery
-    ChooseProjectForm.Show;
+    //ChooseProjectForm.Show;
+    FrProjectWizard.Show;
   end;
 end;
 

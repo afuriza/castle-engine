@@ -150,6 +150,7 @@ end;
 procedure TfrOpenProject.bcOpenProjectClick(Sender: TObject);
 begin
   FrProjectWizard.ProjectOpen(EditProjectPath.Text);
+  FrProjectWizard.Hide;
 end;
 
 end.

@@ -9,6 +9,7 @@ object frOpenProject: TfrOpenProject
   DesignTimePPI = 144
   OnActivate = FormActivate
   OnShow = FormShow
+  LCLVersion = '2.0.12.0'
   object lbRecents: TListBox
     Left = 8
     Height = 215

@@ -94,7 +94,8 @@ begin
   frCreateProject.BorderStyle := bsNone;
   frCreateProject.Align := alClient;
   frCreateProject.Color := pnProject.Background.Color;
-  frCreateProject.CloseTarget := Self;
+  pnTabPos.Top := bcNew.Top;
+  frOpenProject.Hide;
   frCreateProject.Show;
 end;
 
